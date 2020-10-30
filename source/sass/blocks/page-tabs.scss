@@ -58,7 +58,11 @@
 }
 
 @media (min-width: $desktop-width) {
+    .page-tabs__content-list {
+        padding: 0 60px;
+    }
     .page-tabs__top {
+        margin-bottom: 0;
         padding: 0 60px;
 
         display: flex;
