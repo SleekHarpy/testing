@@ -30,6 +30,7 @@
 
     .nav-list__link {
         transition: 0.2s color;
+
         &:hover,
         &:active {
             color: $color-hover;

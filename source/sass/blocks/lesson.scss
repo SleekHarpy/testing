@@ -1,0 +1,139 @@
+.lesson {
+    margin-bottom: 30px;
+    padding: 0 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+
+    border-top: 1px solid $color-border;
+
+    &--hidden {
+        display: none;
+    }
+
+    &:first-of-type {
+        border: none;
+    }
+}
+
+.lesson__date {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 175px;
+}
+
+.lesson__day {
+    margin: 44px 0;
+    margin-right: 10px;
+
+    font-size: 50px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.lesson__lesson-month {
+    margin: 0;
+}
+
+.lesson__time {
+    margin: 0;
+}
+
+.lesson__interlocutor {
+    display: flex;
+    order: 1;
+}
+
+.lesson__interlocutor-img {
+    display: flex;
+    align-items: center;
+    width: 95px;
+}
+
+.lesson__user-name {
+    margin: 8px 0;
+
+    display: block;
+
+    font-weight: 500;
+    color: $color-main;
+    text-decoration: none;
+}
+
+.lesson__img {
+    &--top {
+        transform: translateX(-21px);
+        z-index: 10;
+    }
+}
+
+.lesson__user-info {
+    margin: 0;
+
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 400;
+}
+
+.lesson__type {
+    display: flex;
+    align-items: center;
+}
+
+.lesson__type-text {
+    margin-right: 10px;
+}
+
+.lesson__type-icon {
+    margin-right: 13px;
+}
+
+.lesson__menu {
+    position: relative;
+    padding: 0;
+
+    display: block;
+    width: 4px;
+    height: 16px;
+
+    background: none;
+    border: none;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 4px;
+        height: 4px;
+
+        background-color: #000000;
+        box-shadow: 0 12px 0 0 #000000;
+        border-radius: 50%;
+
+        content: "";
+    }
+
+    &::after {
+        position: absolute;
+        top: 6px;
+        left: 0;
+
+        display: block;
+        width: 4px;
+        height: 4px;
+
+        background-color: #000000;
+        border-radius: 50%;
+
+        content: "";
+    }
+}

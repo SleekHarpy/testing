@@ -1,0 +1,17 @@
+.timetable {
+    font-family: $font-main;
+}
+
+.timetable__title {
+    margin-bottom: 0;
+    padding: 7px 14px;
+    padding-bottom: 5px;
+
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-gray;
+
+    background-color: $color-bg;
+}
