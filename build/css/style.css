@@ -5,6 +5,15 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15; }
+
 html {
   line-height: 1.15;
   /* 1 */
@@ -387,6 +396,23 @@ input[type="radio"].visually-hidden {
   transform: rotate(-45deg);
   width: 21px; }
 
+@media (min-width: 1200px) {
+  .header__inner {
+    padding: 22px 60px;
+    justify-content: flex-start;
+    width: 1200px; }
+  .header__logo {
+    margin-right: 108px; }
+  .header__nav-user {
+    display: flex; }
+  .header__menu-switcher {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  .main-nav {
+    margin-right: 156px;
+    width: 480px; } }
+
 .nav-list {
   margin: 0;
   padding: 0;
@@ -402,6 +428,20 @@ input[type="radio"].visually-hidden {
   line-height: 19.5px;
   font-weight: 500;
   letter-spacing: 3%; }
+
+@media (min-width: 1200px) {
+  .nav-list {
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap; }
+  .nav-list__item {
+    margin-right: 33px; }
+  .nav-list__link {
+    transition: 0.2s color; }
+    .nav-list__link:hover, .nav-list__link:active {
+      color: #466AAA; }
+    .nav-list__link--active {
+      color: #466AAA; } }
 
 .user-block {
   display: flex;

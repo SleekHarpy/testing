@@ -94,3 +94,24 @@
         width: 21px;
     }
 }
+
+@media (min-width: $desktop-width) {
+    .header__inner {
+        padding: 22px 60px;
+        justify-content: flex-start;
+
+        width: $desktop-width;
+    }
+
+    .header__logo {
+        margin-right: 108px;
+    }
+
+    .header__nav-user {
+        display: flex;
+    }
+
+    .header__menu-switcher {
+        display: none;
+    }
+}

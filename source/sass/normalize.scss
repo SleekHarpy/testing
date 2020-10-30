@@ -8,6 +8,17 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.15;
+}
+
 html {
   line-height: 1.15; /* 1 */
   overflow-x: hidden;

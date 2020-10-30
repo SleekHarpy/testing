@@ -16,3 +16,28 @@
     font-weight: 500;
     letter-spacing: 3%;
 }
+
+@media (min-width: $desktop-width) {
+    .nav-list {
+        margin-right: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .nav-list__item {
+        margin-right: 33px;
+    }
+
+    .nav-list__link {
+        transition: 0.2s color;
+        &:hover,
+        &:active {
+            color: $color-hover;
+        }
+
+        &--active {
+            color: $color-hover;
+        }
+    }
+
+}
