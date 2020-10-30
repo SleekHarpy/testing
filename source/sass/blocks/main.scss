@@ -2,7 +2,14 @@
     margin: 0 auto;
     padding-top: 94px;
 
-    width: 375px;
+    width: $mobile-width;
 
     font-family: $font-main;
+}
+
+@media (min-width: $desktop-width) {
+    .main {
+        width: $desktop-width;
+
+    }
 }

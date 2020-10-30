@@ -55,3 +55,24 @@
         display: block;
     }
 }
+
+@media (min-width: $desktop-width) {
+    .page-tabs__top {
+        padding: 0 60px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .page-tabs__title {
+        margin-top: 39px;
+        margin-bottom: 45px;
+    
+        font-size: 35px;
+    }
+
+    .page-tabs__btn-list {
+        width: 345px;
+    }
+}

@@ -501,6 +501,10 @@ input[type="radio"].visually-hidden {
   width: 375px;
   font-family: "IBM Plex Sans", "Arial", sans-serif; }
 
+@media (min-width: 1200px) {
+  .main {
+    width: 1200px; } }
+
 .page-tabs__top {
   padding: 0 20px; }
 
@@ -542,5 +546,18 @@ input[type="radio"].visually-hidden {
   display: none; }
   .page-tabs__content-item--active {
     display: block; }
+
+@media (min-width: 1200px) {
+  .page-tabs__top {
+    padding: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .page-tabs__title {
+    margin-top: 39px;
+    margin-bottom: 45px;
+    font-size: 35px; }
+  .page-tabs__btn-list {
+    width: 345px; } }
 
 /*# sourceMappingURL=style.css.map */
