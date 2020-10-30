@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="preload" href="fonts/ibm-plex-sans-v8-cyrillic-300.woff2" as="font">
@@ -18,26 +18,33 @@
     </div>
 
     <header class="header">
-      <div class="logo">
-        <img src="img/logo.svg" alt="Логотип">
-      </div>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-list__item"><a href="#" class="nav-list__link">Календарь</a></li>
-          <li class="nav-list__item"><a href="#" class="nav-list__link">Сообщения</a></li>
-          <li class="nav-list__item"><a href="#" class="nav-list__link">Собеседники</a></li>
-          <li class="nav-list__item"><a href="#" class="nav-list__link">Репетиторы</a></li>
-        </ul>
-      </nav>
-      <div class="user-block">
-        <img src="img/userpic7.png" alt="Фотография пользователя">
-        <div>
-          <p class="user-block__name">Екатерина М.</p>
-          <p class="user-block__money">
-            <span  class="user-block__coins">52 <img src="img/icon-coin.svg" alt="Coin"></span>
-            <span class="user-block__dollars">2394 &dollar;</span>
-          </p>
+      <div class="header__inner">
+        <div class="header__logo">
+          <img src="img/logo.svg" alt="Логотип">
         </div>
+        <div class="header__nav-user">
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Календарь</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Сообщения</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Собеседники</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Репетиторы</a></li>
+            </ul>
+          </nav>
+          <div class="user-block">
+            <div  class="user-block__img">
+              <img src="img/userpic7.png" alt="Фотография пользователя">
+            </div>
+            <div class="user-block__info">
+              <p class="user-block__name">Екатерина М.</p>
+              <p class="user-block__money">
+                <span class="user-block__coins">52</span>
+                <span class="user-block__dollars">2394 &dollar;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="header__menu-switcher" type="button"></button>
       </div>
     </header>
 
@@ -129,5 +136,6 @@
       </section>
     </footer>
 
+    <script src="js/mobile-menu.js"></script>
   </body>
 </html>
