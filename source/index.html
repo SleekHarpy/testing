@@ -49,43 +49,56 @@
     </header>
 
     <main class="main">
-      <div class="main__top">
-        <h1 class="main__title">Календарь</h1>
+      <div class="page-tabs">
+        <div class="page-tabs__top">
+          <h1 class="page-tabs__title">Календарь</h1>
+  
 
-        <div class="main__tabs">
-          <ul class="tabs">
-            <li class="tabs__item">Запросы</li>
-            <li class="tabs__item">Записи</li>
-            <li class="tabs__item">Архив</li>
+          <ul class="page-tabs__btn-list">
+            <li class="page-tabs__btn-item page-tabs__btn-item--active">Запросы</li>
+            <li class="page-tabs__btn-item">Записи</li>
+            <li class="page-tabs__btn-item">Архив</li>
           </ul>
+
+        </div>
+  
+        <div class="page-tabs__content-list">
+          <section class="page-tabs__content-item page-tabs__content-item--active timetable">
+            <div class="timetable__month">
+              <h2 class="timetable__title">Октябрь 2018</h2>
+              <div class="timetable__lesson lesson">
+                  <p class="lesson__day">15</p>
+                  <p class="lesson__lesson-month">Октября</p>
+                  <p class="lesson__time">18:00 - 20:00</p>
+              </div>
+              <div class="lesson__interlocutor">
+                <div class="lesson__icons">
+                  <img src="img/flag2.png" alt="">
+                  <img src="img/uzerpic2.png" alt="Фотография пользователя">
+                </div>
+                <div class="lesson__info">
+                  <p class="lesson__user-name">Иван Сокольский</p>
+                  <p class="lesson__user-info">24 года, Россия, среднее образование</p>
+                </div>
+              </div>
+              <div class="lesson__type">
+                <p>Беседа</p>
+                <img class="lesson__type-icon" src="img/flag2.png" alt="">
+                <button class="lesson__menu" type="button"></button>
+              </div>
+            </div>
+          </section>
+
+          <section class="page-tabs__content-item">
+            <h1>Содержимое вкладки "Записи"</h1>
+          </section>
+
+          <section class="page-tabs__content-item">
+            <h1>Содержимое вкладки "Архив"</h1>
+          </section>
+
         </div>
       </div>
-
-      <section class="timetable">
-        <div class="timetable__month">
-          <h2 class="timetable__title">Октябрь 2018</h2>
-          <div class="timetable__lesson lesson">
-              <p class="lesson__day">15</p>
-              <p class="lesson__lesson-month">Октября</p>
-              <p class="lesson__time">18:00 - 20:00</p>
-          </div>
-          <div class="lesson__interlocutor">
-            <div class="lesson__icons">
-              <img src="img/flag2.png" alt="">
-              <img src="img/uzerpic2.png" alt="Фотография пользователя">
-            </div>
-            <div class="lesson__info">
-              <p class="lesson__uzer-name">Иван Сокольский</p>
-              <p class="lesson__uzer-info">24 года, Россия, среднее образование</p>
-            </div>
-          </div>
-          <div class="lesson__type">
-            <p>Беседа</p>
-            <img class="lesson__type-icon" src="img/flag2.png" alt="">
-            <button class="lesson__menu" type="button"></button>
-          </div>
-        </div>
-      </section>
     </main>
 
     <footer class="footer">
@@ -137,5 +150,6 @@
     </footer>
 
     <script src="js/mobile-menu.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>
