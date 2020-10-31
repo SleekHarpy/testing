@@ -2,8 +2,8 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Кэт энерджи</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Тестовое задание</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
     <link rel="preload" href="fonts/ibm-plex-sans-v8-cyrillic-300.woff2" as="font">
@@ -17,7 +17,327 @@
       <include src="build/img/sprite.svg"></include>
     </div>
 
+    <header class="header">
+      <div class="header__inner">
+        <a href="#" class="header__logo">
+          <img src="img/logo.svg" alt="Логотип">
+        </a>
+        <div class="header__nav-user">
+          <nav class="main-nav">
+            <ul class="nav-list">
+              <li class="nav-list__item"><a class="nav-list__link nav-list__link--active">Календарь</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Сообщения</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Собеседники</a></li>
+              <li class="nav-list__item"><a href="#" class="nav-list__link">Репетиторы</a></li>
+            </ul>
+          </nav>
+          <div class="user-block">
+            <div  class="user-block__img">
+              <img src="img/userpic7.png" alt="Фотография пользователя">
+            </div>
+            <div class="user-block__info">
+              <p class="user-block__name">Екатерина М.</p>
+              <p class="user-block__money">
+                <span class="user-block__coins">52</span>
+                <span class="user-block__dollars">2394 &dollar;</span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <button class="header__menu-switcher" type="button"></button>
+      </div>
+    </header>
 
+    <main class="main">
+      <div class="page-tabs">
+        <div class="page-tabs__top">
+          <h1 class="page-tabs__title">Календарь</h1>
 
+          <ul class="page-tabs__btn-list">
+            <li class="page-tabs__btn-item page-tabs__btn-item--active">Запросы</li>
+            <li class="page-tabs__btn-item">Записи</li>
+            <li class="page-tabs__btn-item">Архив</li>
+          </ul>
+
+        </div>
+
+        <div class="page-tabs__content-list">
+          <section class="page-tabs__content-item page-tabs__content-item--active timetable">
+            <div class="timetable__month">
+              <h2 class="timetable__title">Октябрь 2018</h2>
+
+              <div class="timetable__lesson lesson">
+                <div class="lesson__date">
+                  <p class="lesson__day">15</p>
+                  <div>
+                    <p class="lesson__lesson-month">Октября</p>
+                    <p class="lesson__time">18:00 - 20:00</p>
+                  </div>
+                  <p class="lesson__notice">Согласование</p>
+                </div>
+                <div class="lesson__interlocutor">
+                  <div class="lesson__interlocutor-img">
+                    <img class="lesson__img" src="img/flag2.png" alt="">
+                    <img class="lesson__img lesson__img--top" src="img/uzerpic2.png" alt="Фотография пользователя">
+                  </div>
+                  <div class="lesson__info">
+                    <a href="#" class="lesson__user-name">Иван Сокольский</a>
+                    <p class="lesson__user-info">24 года, Россия, среднее образование</p>
+                  </div>
+                </div>
+                <div class="lesson__type">
+                  <p class="lesson__type-text">Беседа</p>
+                  <img class="lesson__type-icon" src="img/flag2.png" alt="">
+                  <div  class="lesson__menu">
+                    <button class="lesson__menu-btn" type="button"></button>
+                    <ul class="lesson__menu-list">
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timetable__lesson lesson">
+                <div class="lesson__date">
+                  <p class="lesson__day">17</p>
+                  <div>
+                    <p class="lesson__lesson-month">Октября</p>
+                    <p class="lesson__time">18:00 - 20:00</p>
+                  </div>
+                  <p class="lesson__notice">Согласование</p>
+                </div>
+                <div class="lesson__interlocutor">
+                  <div class="lesson__interlocutor-img">
+                    <img class="lesson__img" src="img/uzerpic3.png" alt="">
+                    <img class="lesson__img lesson__img--top" src="img/uzerpic4.png" alt="Фотография пользователя">
+                  </div>
+                  <div class="lesson__info">
+                    <a href="#" class="lesson__user-name">Константин Константинопольский</a>
+                    <p class="lesson__user-info">24 года, Россия</p>
+                  </div>
+                </div>
+                <div class="lesson__type">
+                  <p class="lesson__type-text">Урок</p>
+                  <img class="lesson__type-icon" src="img/flag1.png" alt="">
+                  <div  class="lesson__menu">
+                    <button class="lesson__menu-btn" type="button"></button>
+                    <ul class="lesson__menu-list">
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timetable__lesson lesson">
+                <div class="lesson__date">
+                  <p class="lesson__day">17</p>
+                  <div>
+                    <p class="lesson__lesson-month">Октября</p>
+                    <p class="lesson__time">19:00 - 20:00</p>
+                  </div>
+                  <p class="lesson__notice">Согласование</p>
+                </div>
+                <div class="lesson__interlocutor">
+                  <div class="lesson__interlocutor-img">
+                    <img class="lesson__img" src="img/flag2.png" alt="">
+                    <img class="lesson__img lesson__img--top" src="img/uzerpic6.png" alt="Фотография пользователя">
+                  </div>
+                  <div class="lesson__info">
+                    <a href="#" class="lesson__user-name">Анна Петрова</a>
+                    <p class="lesson__user-info">24 года, Россия, среднее образование</p>
+                  </div>
+                </div>
+                <div class="lesson__type">
+                  <p class="lesson__type-text">Беседа</p>
+                  <img class="lesson__type-icon" src="img/flag3.png" alt="">
+                  <div  class="lesson__menu">
+                    <button class="lesson__menu-btn" type="button"></button>
+                    <ul class="lesson__menu-list">
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timetable__month">
+              <h2 class="timetable__title">Ноябрь 2018</h2>
+
+              <div class="timetable__lesson lesson lesson--mobile">
+                <div class="lesson__date">
+                  <p class="lesson__day">1</p>
+                  <div>
+                    <p class="lesson__lesson-month">Ноября</p>
+                    <p class="lesson__time">18:00 - 20:00</p>
+                  </div>
+                  <p class="lesson__notice">Согласование</p>
+                </div>
+                <div class="lesson__interlocutor">
+                  <div class="lesson__interlocutor-img">
+                    <img class="lesson__img" src="img/flag2.png" alt="">
+                    <img class="lesson__img lesson__img--top" src="img/uzerpic2.png" alt="Фотография пользователя">
+                  </div>
+                  <div class="lesson__info">
+                    <a href="#" class="lesson__user-name">Иван Сокольский</a>
+                    <p class="lesson__user-info">24 года, Россия, среднее образование</p>
+                  </div>
+                </div>
+                <div class="lesson__type">
+                  <p class="lesson__type-text">Беседа</p>
+                  <img class="lesson__type-icon" src="img/flag2.png" alt="">
+                  <div  class="lesson__menu">
+                    <button class="lesson__menu-btn" type="button"></button>
+                    <ul class="lesson__menu-list">
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="timetable__lesson lesson lesson--desktop">
+                <div class="lesson__date">
+                  <p class="lesson__day">15</p>
+                  <div>
+                    <p class="lesson__lesson-month">Ноября</p>
+                    <p class="lesson__time">18:00 - 20:00</p>
+                  </div>
+                  <p class="lesson__notice">Согласование</p>
+                </div>
+                <div class="lesson__interlocutor">
+                  <div class="lesson__interlocutor-img ">
+                    <img class="lesson__img" src="img/flag2.png" alt="">
+                    <div class="lesson__img-search"></div>
+                  </div>
+                  <div class="lesson__info">
+                    <p class="lesson__user-search">Поиск собеседника</p>
+                    <p class="lesson__user-info">Любой пол, среднее образование</p>
+                  </div>
+                </div>
+                <div class="lesson__type">
+                  <p class="lesson__type-text">Беседа</p>
+                  <img class="lesson__type-icon" src="img/flag2.png" alt="">
+                  <div  class="lesson__menu">
+                    <button class="lesson__menu-btn" type="button"></button>
+                    <ul class="lesson__menu-list">
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                      <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timetable__lesson lesson lesson--desktop">
+              <div class="lesson__date lesson__date--timing">
+                <p class="lesson__day">17</p>
+                <div>
+                  <p class="lesson__lesson-month">Ноября</p>
+                  <p class="lesson__time">18:00 - 20:00</p>
+                </div>
+                <p class="lesson__notice">Согласование</p>
+              </div>
+              <div class="lesson__interlocutor">
+                <div class="lesson__interlocutor-img">
+                  <img class="lesson__img" src="img/uzerpic3.png" alt="">
+                  <img class="lesson__img lesson__img--top" src="img/uzerpic8.png" alt="Фотография пользователя">
+                </div>
+                <div class="lesson__info">
+                  <a href="#" class="lesson__user-name">Катерина Иванова</a>
+                  <p class="lesson__user-info">44 года, Россия, Высшее образование, Профессиональный репетитор</p>
+                </div>
+              </div>
+              <div class="lesson__type">
+                <p class="lesson__type-text">Урок</p>
+                <img class="lesson__type-icon" src="img/flag1.png" alt="">
+                <div  class="lesson__menu">
+                  <button class="lesson__menu-btn" type="button"></button>
+                  <ul class="lesson__menu-list">
+                    <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 1</a></li>
+                    <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 2</a></li>
+                    <li class="lesson__menu-item"><a href="#" class="lesson__menu-link">Пункт меню 3</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </section>
+
+          <section class="page-tabs__content-item">
+            <h1>Содержимое вкладки "Записи"</h1>
+          </section>
+
+          <section class="page-tabs__content-item">
+            <h1>Содержимое вкладки "Архив"</h1>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <a href="#" class="footer__logo">
+          <img src="img/logo-secondary.svg" alt="Логотип">
+        </a>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a class="footer-list__link" href="#">О нас</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Помощь</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Репетиторам</a></li>
+        </ul>
+
+        <section class="apps">
+          <h2 class="visually-hidden">Приложения</h2>
+          <p class="apps__description">Скачайте приложение и получите приветственный бонус!</p>
+          <a class="apps__link" href="#">
+            <img src="img/app-store-badge.svg" alt="Приложение в App Store">
+          </a>
+          <a class="apps__link" href="#">
+            <img src="img/google-play-badge.svg" alt="Приложение в Google Play">
+          </a>
+        </section>
+
+        <section class="social">
+          <h2 class="visually-hidden">Сыллки на социальные сети</h2>
+          <ul class="social__list">
+            <li class="social-list__item">
+              <a href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg class="social__svg-icon social__svg-icon--facebook" width="19" height="19">
+                  <use xlink:href="#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg class="social__svg-icon social__svg-icon--vk" width="19" height="19">
+                  <use xlink:href="#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg class="social__svg-icon social__svg-icon--inst" width="17" height="17">
+                  <use xlink:href="#icon-inst"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    <script src="js/mobile-menu.js"></script>
+    <script src="js/tabs.js"></script>
   </body>
 </html>

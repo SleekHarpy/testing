@@ -9,15 +9,31 @@ const autoprefixer = require("autoprefixer");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
 const uglify = require("gulp-uglify-es").default;
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const sync = require("browser-sync").create();
 
+// Sprite
+
+const sprite = () => {
+  return gulp.src("source/img/**/icon-*.svg")
+    .pipe(svgstore({ inlineSvg: true }))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
+}
+
+exports.sprite = sprite;
+
 // HTML
 
 const html = () => {
   return gulp.src("source/**.html")
+    .pipe(posthtml([
+      include()
+    ]))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest("build"));
 }
@@ -83,17 +99,6 @@ const webpTask = () => {
 
 exports.webp = webpTask;
 
-// Sprite
-
-const sprite = () => {
-  return gulp.src("source/img/**/sprite-*.svg")
-    .pipe(svgstore({ inlineSvg: true }))
-    .pipe(rename("sprites.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.sprite = sprite;
-
 // JS
 
 const js = () => {
@@ -130,13 +135,13 @@ exports.clean = clean;
 const build = gulp.series(
   clean,
   copy,
-  html,
   styles,
   minStyles,
   js,
   images,
   webpTask,
-  sprite
+  sprite,
+  html
 );
 
 exports.build = build;

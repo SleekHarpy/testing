@@ -1,0 +1,29 @@
+.footer {
+    display: none;
+}
+
+@media (min-width: $desktop-width) {
+    .footer {
+        display: block;
+
+        background-color: $color-bg-secondery;
+    }
+
+    .footer__inner {
+        margin: 0 auto;
+        padding: 65px 60px;
+        padding-bottom: 155px;
+
+        display: flex;
+        width: $desktop-width;
+
+        font-family: $font-main;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+
+    .footer__logo {
+        margin-right: 52px;
+    }
+}

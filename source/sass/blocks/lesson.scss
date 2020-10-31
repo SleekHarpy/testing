@@ -1,0 +1,283 @@
+.lesson {
+    margin-bottom: 30px;
+    padding: 0 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    font-size: 15px;
+    line-height: 22px;
+    font-weight: 400;
+
+    border-top: 1px solid $color-border;
+
+    &--desktop {
+        display: none;
+    }
+
+    &:first-of-type {
+        border: none;
+    }
+}
+
+.lesson__date {
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 175px;
+
+    &--timing {
+        color: $color-red
+    }
+}
+
+.lesson__day {
+    margin: 24px 0;
+    margin-right: 10px;
+
+    font-size: 50px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.lesson__lesson-month {
+    margin: 0;
+}
+
+.lesson__time {
+    margin: 0;
+}
+
+.lesson__notice {
+    margin: 0;
+    margin-left: 59px;
+    padding-left: 22px;
+
+    display: none;
+
+    background-image: url("../img/icon-time.svg");
+    background-repeat: no-repeat;
+    background-position: 0 center;
+}
+
+.lesson__date--timing .lesson__notice {
+    display: block;
+}
+
+.lesson__interlocutor {
+    display: flex;
+    order: 1;
+}
+
+.lesson__interlocutor-img {
+    display: flex;
+    align-items: center;
+    width: 104px;
+}
+
+.lesson__user-name {
+    margin: 8px 0;
+
+    display: block;
+
+    font-weight: 500;
+    color: $color-main;
+    text-decoration: none;
+}
+
+.lesson__user-search {
+    margin: 0;
+    margin-bottom: 5px;
+
+    font-weight: 500;
+    color: $color-red;
+}
+
+.lesson__img {
+    &--top {
+        transform: translateX(-21px);
+        z-index: 10;
+    }
+}
+
+.lesson__img-search {
+    display: block;
+    width: 54px;
+    height: 54px;
+
+    transform: translateX(-21px);
+
+    background-color: $color-white;
+    background-image: url("../img/icon-phone.svg");
+    background-repeat: no-repeat;
+    background-position: 45% 55%;
+    border-radius: 50%;
+    border: 4px solid #EFEFF4;
+}
+
+.lesson__user-info {
+    margin: 0;
+
+    max-width: 398px;
+
+    font-size: 13px;
+    line-height: 12px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    overflow: hidden;
+}
+
+.lesson__type {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.lesson__type-text {
+    margin-right: 10px;
+}
+
+.lesson__type-icon {
+    margin-right: 13px;
+}
+
+.lesson__menu-btn {
+    position: relative;
+    padding: 0;
+
+    display: block;
+    width: 4px;
+    height: 16px;
+
+    border: none;
+
+    z-index: 10;
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+        width: 4px;
+        height: 4px;
+
+        background-color: #000000;
+        box-shadow: 0 12px 0 0 #000000;
+        border-radius: 50%;
+
+        content: "";
+    }
+
+    &::after {
+        position: absolute;
+        top: 6px;
+        left: 0;
+
+        display: block;
+        width: 4px;
+        height: 4px;
+
+        background-color: #000000;
+        border-radius: 50%;
+
+        content: "";
+    }
+}
+
+.lesson__menu-list {
+    @include list-reset;
+
+    width: max-content;
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: 21px;
+    right: -4px;
+    padding: 10px 15px;
+    padding-right: 25px;
+
+    background-color: $color-bg-secondery;
+    border-radius: 5px;
+
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.lesson__menu-link {
+    color: $color-black;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.lesson__menu:hover .lesson__menu-list {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+@media (min-width: $desktop-width) {
+    .lesson {
+        margin-bottom: 10px;
+
+        padding: 20px 0;
+        padding-right: 37px;
+
+        &--mobile {
+            display: none;
+        }
+
+        &--desktop {
+            display: flex;
+        }
+    }
+
+    .lesson__date {
+        margin-right: 27px;
+    }
+
+    .lesson__interlocutor {
+        margin-right: auto;
+
+        align-items: center;
+        order: 0;
+    }
+
+    .lesson__user-name {
+        margin: 5px 0;
+        margin-top: 0;
+
+        transition: 0.2s color;
+
+        &:hover,
+        &:active {
+            color: $color-hover;
+        }
+
+        &--active {
+            color: $color-hover;
+        }
+    }
+
+    .lesson__menu-btn {
+        cursor: pointer;
+    }
+
+    .lesson__menu-link {
+        transition: 0.2s color;
+
+        &:hover,
+        &:active {
+            color: $color-hover;
+        }
+
+        &--active {
+            color: $color-hover;
+        }
+    }
+}

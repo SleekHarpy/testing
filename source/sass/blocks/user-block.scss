@@ -1,0 +1,68 @@
+.user-block {
+    display: flex;
+    align-items: center;
+}
+
+.user-block__img {
+    margin-right: 8px;
+}
+
+.user-block__name {
+    margin: 0;
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    line-height: 17px;
+    font-weight: 400;
+    letter-spacing: 3%;
+}
+
+.user-block__money {
+    margin: 0;
+    padding: 4px 10px;
+    padding-right: 12px;
+
+    font-size: 13px;
+    line-height: 17px;
+    font-weight: 600;
+    color: $color-main;
+    background-color: $color-secondery;
+    border-radius: 50px;
+}
+
+.user-block__coins {
+    position: relative;
+    padding-right: 25px;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        right: 4px;
+
+        display: block;
+        width: 17px;
+        height: 17px;
+
+        background-image: url("../img/icon-coin.svg");
+
+        content: "";
+    }
+}
+
+.user-block__dollars {
+    position: relative;
+    padding-left: 8px;
+
+    &::before {
+        position: absolute;
+        top: -4px;
+        left: 0;
+
+        display: block;
+        width: 1px;
+        height: calc(100% + 8px);
+        background-color: #D1D1D6;
+
+        content: "";
+    }
+}

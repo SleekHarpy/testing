@@ -1,0 +1,1 @@
+!function(){"use strict";const e=document.querySelector(".header__menu-switcher"),t=document.querySelector(".header__nav-user");e.addEventListener("click",(function(){e.classList.toggle("header__menu-switcher--opened"),t.classList.toggle("header__nav-user--opened")}))}();
