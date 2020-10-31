@@ -4,38 +4,38 @@ const TabItemSelector = '.page-tabs__btn-item';
 const ContentItemSelector = '.page-tabs__content-item';
 
 class TabsManager {
-  constructor(navNode){
-    this.tabs = [];
-    this.activeTab = null;
+    constructor(navNode){
+        this.tabs = [];
+        this.activeTab = null;
 
-    this.initFromHtml(navNode);
+        this.initFromHtml(navNode);
 
-    this.activateTab(this.tabs[0]);
-  }
-
-  initFromHtml (navNode) {
-    const headers  = navNode.querySelectorAll(TabItemSelector);
-    const contents = navNode.querySelectorAll(ContentItemSelector);
-
-    for (var i = 0; i < headers.length; i++) {
-        this.registerTab(headers[i], contents[i]);
-    }
-  }
-
-  registerTab (header, content) {
-    const tab = new TabItem(header, content);
-    tab.onActivate(() => this.activateTab(tab));
-    this.tabs.push(tab);
-  }
-
-  activateTab (tabItem) {
-    if (this.activeTab) {
-        this.activeTab.setActive(false);
+        this.activateTab(this.tabs[0]);
     }
 
-    this.activeTab = tabItem;
-    this.activeTab.setActive(true);
-  }
+    initFromHtml (navNode) {
+        const headers  = navNode.querySelectorAll(TabItemSelector);
+        const contents = navNode.querySelectorAll(ContentItemSelector);
+
+        for (var i = 0; i < headers.length; i++) {
+            this.registerTab(headers[i], contents[i]);
+        }
+    }
+
+    registerTab (header, content) {
+        const tab = new TabItem(header, content);
+        tab.onActivate(() => this.activateTab(tab));
+        this.tabs.push(tab);
+    }
+
+    activateTab (tabItem) {
+        if (this.activeTab) {
+            this.activeTab.setActive(false);
+        }
+
+        this.activeTab = tabItem;
+        this.activeTab.setActive(true);
+    }
 
 }
 
@@ -57,6 +57,6 @@ class TabItem {
 }
 
 document.addEventListener('DOMContentLoaded', ()=>{
-  let tabs = new TabsManager(document.querySelector('.page-tabs'));
+    let tabs = new TabsManager(document.querySelector('.page-tabs'));
 })
 })();
