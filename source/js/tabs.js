@@ -1,5 +1,5 @@
 (function () {
-    
+
 const TabItemSelector = '.page-tabs__btn-item';
 const ContentItemSelector = '.page-tabs__content-item';
 
@@ -9,7 +9,7 @@ class TabsManager {
     this.activeTab = null;
 
     this.initFromHtml(navNode);
-    
+
     this.activateTab(this.tabs[0]);
   }
 
@@ -27,7 +27,7 @@ class TabsManager {
     tab.onActivate(() => this.activateTab(tab));
     this.tabs.push(tab);
   }
-  
+
   activateTab (tabItem) {
     if (this.activeTab) {
         this.activeTab.setActive(false);
@@ -36,7 +36,7 @@ class TabsManager {
     this.activeTab = tabItem;
     this.activeTab.setActive(true);
   }
-  
+
 }
 
 const ActiveTabHeaderClass = 'page-tabs__btn-item--active';

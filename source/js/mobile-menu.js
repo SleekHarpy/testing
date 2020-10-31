@@ -1,5 +1,5 @@
 (function () {
-    'use strict'
+  'use strict'
 
     const menuSwitcher = document.querySelector('.header__menu-switcher');
     const headerNavUser = document.querySelector('.header__nav-user');

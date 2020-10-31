@@ -1,0 +1,23 @@
+.footer-list {
+    @include list-reset;
+
+    margin-top: 8px;
+    margin-right: auto;
+}
+
+.footer-list__link {
+    color: $color-black;
+    line-height: 31px;
+    text-decoration: none;
+
+    transition: 0.2s color;
+
+    &:hover,
+    &:active {
+        color: $color-hover;
+    }
+
+    &--active {
+        color: $color-hover;
+    }
+}

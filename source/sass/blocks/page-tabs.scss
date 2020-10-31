@@ -73,11 +73,15 @@
     .page-tabs__title {
         margin-top: 39px;
         margin-bottom: 45px;
-    
+
         font-size: 35px;
     }
 
     .page-tabs__btn-list {
         width: 345px;
+    }
+
+    .page-tabs__btn-item {
+        cursor: pointer;
     }
 }
